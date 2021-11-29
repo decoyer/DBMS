@@ -1,0 +1,16 @@
+C:\Users\dohyun\source\repos\dbtp\dbtp\obj\Debug\dbms.csproj.AssemblyReference.cache
+C:\Users\dohyun\source\repos\dbtp\dbtp\obj\Debug\dbms.csproj.SuggestedBindingRedirects.cache
+C:\Users\dohyun\source\repos\dbtp\dbtp\obj\Debug\dbtp.AdminForm.resources
+C:\Users\dohyun\source\repos\dbtp\dbtp\obj\Debug\dbtp.IdForm.resources
+C:\Users\dohyun\source\repos\dbtp\dbtp\obj\Debug\dbtp.LoginForm.resources
+C:\Users\dohyun\source\repos\dbtp\dbtp\obj\Debug\dbtp.MemberForm.resources
+C:\Users\dohyun\source\repos\dbtp\dbtp\obj\Debug\dbms.Properties.Resources.resources
+C:\Users\dohyun\source\repos\dbtp\dbtp\obj\Debug\dbtp.PwForm.resources
+C:\Users\dohyun\source\repos\dbtp\dbtp\obj\Debug\dbtp.RegForm.resources
+C:\Users\dohyun\source\repos\dbtp\dbtp\obj\Debug\dbms.csproj.GenerateResource.cache
+C:\Users\dohyun\source\repos\dbtp\dbtp\obj\Debug\dbms.csproj.CoreCompileInputs.cache
+C:\Users\dohyun\source\repos\dbtp\dbtp\bin\Debug\dbms.exe.config
+C:\Users\dohyun\source\repos\dbtp\dbtp\bin\Debug\dbms.exe
+C:\Users\dohyun\source\repos\dbtp\dbtp\bin\Debug\dbms.pdb
+C:\Users\dohyun\source\repos\dbtp\dbtp\obj\Debug\dbms.exe
+C:\Users\dohyun\source\repos\dbtp\dbtp\obj\Debug\dbms.pdb
