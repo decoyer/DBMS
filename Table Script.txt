@@ -1,0 +1,59 @@
+CREATE TABLE 할인율 (
+	등급 	VARCHAR(10) 	NOT NULL ,
+   	할인율 	NUMBER(3) 	NOT NULL,
+       	CONSTRAINT 할인율_PK PRIMARY KEY (등급),
+	CONSTRAINT 할인율_CK CHECK (등급 IN ('VIP', 'GOLD', 'SILVER')));
+
+CREATE TABLE 회원 (
+	아이디 		VARCHAR(10) 	NOT NULL,
+	비밀번호		VARCHAR(64)	NOT NULL,
+   	회원이름 		VARCHAR(20) 	NOT NULL,
+   	전화번호		VARCHAR(15) 	NOT NULL,
+   	등급 		VARCHAR(10) 	DEFAULT  'SILVER'  NOT NULL,
+   	카드번호 		VARCHAR(30) 	NOT NULL,
+	승인여부		VARCHAR(5)	DEFAULT 'N'	 NOT NULL,
+   	CONSTRAINTS 회원_PK PRIMARY KEY (회원번호),
+       	CONSTRAINTS 회원_등급_FK FOREIGN KEY(등급) REFERENCES  할인율(등급) );
+
+CREATE TABLE 영화 (
+	영화번호 		VARCHAR(10)  	NOT NULL,
+	영화제목 		VARCHAR(30) 	NOT NULL,
+	장르		VARCHAR(20)	NOT NULL,
+	영화감독 		VARCHAR(20) 	NOT NULL,
+	주연배우 		VARCHAR(20) 	NOT NULL,
+	포스터  		BLOB,
+   	CONSTRAINTS 영화_PK PRIMARY KEY (영화번호));
+
+CREATE TABLE 상영관 (
+	상영관번호 	VARCHAR(10) 	NOT NULL,
+	상영관형태 	VARCHAR(10) 	NOT NULL,
+       	CONSTRAINT 상영관_PK PRIMARY KEY (상영관번호),
+	CONSTRAINT 상영관_CK CHECK (상영관형태 IN ('2D', '3D', 'X-Screen')));
+
+CREATE TABLE 상영관좌석 (
+	상영관번호 	VARCHAR(10) 	NOT NULL,
+	좌석번호		VARCHAR(20)	NOT NULL,
+   	CONSTRAINTS 상영관좌석_PK PRIMARY KEY (상영관번호, 좌석번호),
+       	CONSTRAINTS 상영관좌석_상영관번호_FK FOREIGN KEY(상영관번호) REFERENCES  상영관(상영관번호));
+
+CREATE TABLE 상영스케줄 (
+       	영화번호 	       	VARCHAR(10) 	NOT NULL,
+       	상영시간 	       	VARCHAR(20)       	NOT NULL,
+       	상영관번호 	VARCHAR(10) 	NOT NULL,
+       	요금 	       	VARCHAR(10) 	NOT NULL,
+   	CONSTRAINTS 상영스케줄_PK PRIMARY KEY (영화번호, 상영시간, 상영관번호),
+       	CONSTRAINTS 상영스케줄_상영관번호_FK FOREIGN KEY(상영관번호) REFERENCES  상영관(상영관번호),
+       	CONSTRAINTS 상영스케줄_영화번호_FK FOREIGN KEY(영화번호) REFERENCES  영화(영화번호));
+
+CREATE TABLE 예매좌석 (
+   	영화번호 	   	VARCHAR(10)	NOT NULL,
+   	상영시간 	   	VARCHAR(20)	NOT NULL,
+   	상영관번호 	VARCHAR(10)	NOT NULL,
+   	좌석번호 	   	VARCHAR(20)	NOT NULL,
+   	아이디		VARCHAR(10)	NOT NULL,
+	예매일시		VARCHAR(20)	NOT NULL,
+   	금액 	   	VARCHAR(10)	NOT NULL,
+	예약번호		VARCHAR(30)	NOT NULL,
+   	CONSTRAINTS 예매좌석_PK PRIMARY KEY (영화번호, 상영시간, 상영관번호, 좌석번호, 아이디),
+       	CONSTRAINTS  예매좌석_상영스케줄_FK FOREIGN KEY(영화번호, 상영시간, 상영관번호) REFERENCES  상영스케줄(영화번호, 상영시간, 상영관번호),
+       	CONSTRAINTS 예매좌석_상영관좌석_FK FOREIGN KEY(상영관번호, 좌석번호) REFERENCES  상영관좌석(상영관번호, 좌석번호));
