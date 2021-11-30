@@ -3,6 +3,7 @@
 
 ## 실행
 ```
+Table Script.txt
 dbms.sln
 ```
 
