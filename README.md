@@ -1,4 +1,4 @@
-# DBMS - 영화 예매 프로그램
+# 영화 예매 프로그램 (DBMS)
 Data Base Movie Service with *C#*
 
 using *Oracle Database*
