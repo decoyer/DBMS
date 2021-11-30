@@ -1,5 +1,7 @@
 # 영화 예매 프로그램
-### *C#* 코드로 구현한 영화 예매 프로그램
+Data Base Movie Service with C#
+
+using Oracle Database
 
 ## 설명
 - **데이터 베이스**와 연동하여 구현함
