@@ -1,7 +1,7 @@
 # DBMS - 영화 예매 프로그램
-Data Base Movie Service with C#
+Data Base Movie Service with *C#*
 
-using Oracle Database
+using *Oracle Database*
 
 ## Details
 - **데이터 베이스**와 연동하여 구현함
