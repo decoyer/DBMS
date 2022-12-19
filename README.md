@@ -1,5 +1,5 @@
 # 영화 예매 프로그램 (DBMS)
-DataBase Movie Service with *C#*
+Database Booking Movie S with *C#*
 
 using *Oracle Database*
 
