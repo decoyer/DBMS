@@ -10,6 +10,7 @@ using *Oracle Database*
 - **회원**: 회원정보 수정, 회원 탈퇴, 영화 예매, 예매 수정 및 취소
 
 ## Getting Started
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
 ```
 Table Script.txt
 dbms.sln
